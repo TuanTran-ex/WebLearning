@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLONE LENO</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://kit.fontawesome.com/f61c9c0665.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm font-weight-bold p-4 fixed-top">
+        <nav id="header-nav" class="navbar navbar-expand-md font-weight-bold p-4 fixed-top">
             <div class="container">
                 <a href="#" class="navbar-brand ml-n4">
                     <!-- <img src="images/logo.svg" alt="logo" class="d-inline-block align-middle mr-2"> -->
@@ -25,7 +30,8 @@
                         <li class="nav-item"><a href="#" class="nav-link text-uppercase">Features</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-uppercase">Preview</a></li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link text-uppercase dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button">Details</a>
+                            <a href="#" class="nav-link text-uppercase dropdown-toggle" id="navbarDropdown"
+                                data-toggle="dropdown" role="button">Details</a>
                             <div class="dropdown-menu p-3">
                                 <a href="#" class="dropdown-item text-uppercase">Terms Conditions</a>
                                 <div class="dropdown-divider"></div>
@@ -44,24 +50,147 @@
             <div class="container" style="margin-top:80px">
                 <div class="row">
                     <div class="col col-md-6">
-                        <h1 class="text-uppercase">Mobile app for <span id="word-change text-uppercase">Developers</span></h1>
-                        <p>Leno is one of the easiest and feature packed marketing automation apps int the market. Download it today!</p>
+                        <h1 class="text-color text-uppercase font-weight-bold">Mobile app for <span
+                                class="word-change text-uppercase animate__animated animate__fadeIn font-weight-bold">Developers</span>
+                            <span
+                                class="word-change text-uppercase animate__animated animate__fadeIn font-weight-bold">Designers</span>
+                            <span
+                                class="word-change text-uppercase animate__animated animate__fadeIn font-weight-bold">Marketers</span>
+                        </h1>
+                        <p class="text-color">Leno is one of the easiest and feature packed marketing automation apps
+                            int the market. Download it today!</p>
                         <div>
-                            <button class="btn">App store</button>
-                            <button class="btn">Play store</button>
+                            <button class="btn btn-primary text-color">App store</button>
+                            <button class="btn btn-primary text-color">Play store</button>
                         </div>
                     </div>
                     <div class="col col-md-6">
-                        <img src="/images/header-iphone.png" alt="header-iphone">
+                        <img src="./images/header-iphone.png" alt="header-iphone">
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <section class="contents">
 
-    <script src="js/scripts.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- Testimonial -->
+        <div class="slide-review">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide Item -->
+                    <div class="swiper-slide">
+                        <div class="slide-item card text-center">
+                            <div class="card-img-top"><img src="./images/testimonial-1.jpg" alt="testimonial-1"></div>
+                            <div class="card-body">
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <h5 class="text-color">Jude Thorn - Designers</h5>
+                            </div>
+                        </div>
+                    </div> <!-- End Slide Item -->
+
+                    <!-- Slide Item -->
+                    <div class="swiper-slide">
+                        <div class="slide-item card text-center">
+                            <div class="card-img-top"><img src="./images/testimonial-2.jpg" alt="testimonial-2"></div>
+                            <div class="card-body">
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <h5 class="text-color">Roy Smith - Developer</h5>
+                            </div>
+                        </div>
+                    </div> <!-- End Slide Item -->
+
+                    <!-- Slide Item -->
+                    <div class="swiper-slide">
+                        <div class="slide-item card text-center">
+                            <div class="card-img-top"><img src="./images/testimonial-3.jpg" alt="testimonial-3"></div>
+                            <div class="card-body">
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <h5 class="text-color">Marsha Singer - Marketer</h5>
+                            </div>
+                        </div>
+                    </div> <!-- End Slide Item -->
+
+                    <!-- Slide Item -->
+                    <div class="swiper-slide">
+                        <div class="slide-item card text-center">
+                            <div class="card-img-top"><img src="./images/testimonial-4.jpg" alt="testimonial-4"></div>
+                            <div class="card-body">
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <h5 class="text-color">Tim Shaw - Designer</h5>
+                            </div>
+                        </div>
+                    </div> <!-- End Slide Item -->
+
+                    <!-- Slide Item -->
+                    <div class="swiper-slide">
+                        <div class="slide-item card text-center">
+                            <div class="card-img-top"><img src="./images/testimonial-5.jpg" alt="testimonial-5"></div>
+                            <div class="card-body">
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <h5 class="text-color">Lindsay Spice - Marketer</h5>
+                            </div>
+                        </div>
+                    </div> <!-- End Slide Item -->
+
+                    <!-- Slide Item -->
+                    <div class="swiper-slide">
+                        <div class="slide-item card text-center">
+                            <div class="card-img-top"><img src="./images/testimonial-6.jpg" alt="testimonial-6"></div>
+                            <div class="card-body">
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <h5 class="text-color">Ann Black - Developer</h5>
+                            </div>
+                        </div>
+                    </div> <!-- End Slide Item -->
+                </div> <!-- End swiper-wrapper -->
+                
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                
+            </div> <!-- End swiper-container -->
+        </div> <!-- End Testimonial -->
+
+        <div class="features">
+
+            <div class="Element-header">
+                <h2 class="text-color text-uppercase text-center font-weight-bold">Features</h2>
+                <p class="text-color text-center">Lorem ipsum adipisicing elit. Iure accusamus tenetur velit minima rerum praesentium atque accusantium error, quas provident.</p>
+            </div>
+            <div class="features-tab">
+                
+            </div>
+
+        </div> <!--End features-->
+
+        <div class="preview">
+            <div class="Element-header">
+                <h2 class="text-color text-uppercase text-center font-weight-bold">Preview</h2>
+                <p class="text-color text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, dolore corporis ullam molestias vel quia.</p>    
+            </div>
+            <div class="preview-video embed-responsive embed-responsive-16by9">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/mH0_XpSHkZo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div> <!-- End preview -->
+
+    </section>
+    <img src="./images/screenshot-3.png" alt="tmp1">
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js"></script>
 </body>
+
 </html>
