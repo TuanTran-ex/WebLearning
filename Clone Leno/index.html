@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLONE LENO</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://kit.fontawesome.com/f61c9c0665.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <button id="toTop-btn" class="btn animate__animated animate__fadeIn" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
     <header>
         <nav id="header-nav" class="navbar navbar-expand-md font-weight-bold p-4 fixed-top">
             <div class="container">
-                <a href="#" class="navbar-brand ml-n4">
-                    <!-- <img src="images/logo.svg" alt="logo" class="d-inline-block align-middle mr-2"> -->
-                    <img src="images/logo.svg" width="120" alt="logo" class="d-inline-block align-middle mr-2">
+                <a href="./index.html" class="navbar-brand ml-n4">
+                    <img src="./images/logo.svg" width="120" alt="logo" class="d-inline-block align-middle mr-2">
                 </a>
-                <button type="button" data-toggle="collapse" class="navbar-toggler">
-                    <span class="navbar-toggler-icon"></span>
+                <button type="button" data-toggle="collapse" class="navbar-toggler"
+                    data-target="#navbarSupportedContent">
+                    <span><i class="fas fa-bars"></i></span>
                 </button>
                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
@@ -33,49 +34,67 @@
                             <a href="#" class="nav-link text-uppercase dropdown-toggle" id="navbarDropdown"
                                 data-toggle="dropdown" role="button">Details</a>
                             <div class="dropdown-menu p-3">
-                                <a href="#" class="dropdown-item text-uppercase">Terms Conditions</a>
+                                <a href="./terms-conditions.html" class="dropdown-item text-uppercase">Terms Conditions</a>
                                 <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item text-uppercase">Privacy Police</a>
+                                <a href="./privacy-policy.html" class="dropdown-item text-uppercase">Privacy Police</a>
                             </div>
                         </li>
                         <li class="nav-item"><a href="#" class="nav-link text-uppercase">Contact</a></li>
-                        <a href="#" class="nav-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="nav-link"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#" class="nav-link header-nav-icon">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                              </span>
+                        </a>
+                        <a href="#" class="nav-link header-nav-icon">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
                     </ul>
                 </div>
             </div>
         </nav> <!-- End Navbar -->
+
         <!-- Main Header -->
         <div class="main-header">
-            <div class="container" style="margin-top:80px">
+            <div class="container">
                 <div class="row">
-                    <div class="col col-md-6">
-                        <h1 class="text-color text-uppercase font-weight-bold">Mobile app for <span
-                                class="word-change text-uppercase animate__animated animate__fadeIn font-weight-bold">Developers</span>
-                            <span
-                                class="word-change text-uppercase animate__animated animate__fadeIn font-weight-bold">Designers</span>
-                            <span
-                                class="word-change text-uppercase animate__animated animate__fadeIn font-weight-bold">Marketers</span>
-                        </h1>
-                        <p class="text-color">Leno is one of the easiest and feature packed marketing automation apps
-                            int the market. Download it today!</p>
-                        <div>
-                            <button class="btn btn-primary text-color">App store</button>
-                            <button class="btn btn-primary text-color">Play store</button>
+                    <div class="col col-lg-6">
+                        <div class="header-text">
+                            <h1 class="text-color text-uppercase font-weight-bold">Mobile app <br> for <span
+                                    class="word-change text-uppercase animate__animated animate__fadeIn font-weight-bold">Developers</span>
+                                <span
+                                    class="word-change text-uppercase animate__animated animate__fadeIn font-weight-bold">Designers</span>
+                                <span
+                                    class="word-change text-uppercase animate__animated animate__fadeIn font-weight-bold">Marketers</span>
+                            </h1>
+                            <p class="text-color">Leno is one of the easiest and feature packed marketing automation
+                                apps
+                                int the market. Download it today!</p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn-mod btn btn-primary text-color"><i
+                                        class="fab fa-apple text-color mr-3"></i>App store</button>
+                                <button class="btn-mod btn btn-primary text-color"><i
+                                        class="fab fa-google-play text-color mr-3"></i>Play store</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col col-md-6">
+
+                    <div class="header-img col col-lg-6">
                         <img src="./images/header-iphone.png" alt="header-iphone">
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <section class="contents">
+
+    <div class="contents">
 
         <!-- Testimonial -->
         <div class="slide-review">
-            <div class="swiper-container">
+            <div class="swiper-container testimonial-swiper">
                 <div class="swiper-wrapper">
 
                     <!-- Slide Item -->
@@ -83,7 +102,8 @@
                         <div class="slide-item card text-center">
                             <div class="card-img-top"><img src="./images/testimonial-1.jpg" alt="testimonial-1"></div>
                             <div class="card-body">
-                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Repellendus maxime atque a enim voluptatem totam.</p>
                                 <h5 class="text-color">Jude Thorn - Designers</h5>
                             </div>
                         </div>
@@ -94,7 +114,8 @@
                         <div class="slide-item card text-center">
                             <div class="card-img-top"><img src="./images/testimonial-2.jpg" alt="testimonial-2"></div>
                             <div class="card-body">
-                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Repellendus maxime atque a enim voluptatem totam.</p>
                                 <h5 class="text-color">Roy Smith - Developer</h5>
                             </div>
                         </div>
@@ -105,7 +126,8 @@
                         <div class="slide-item card text-center">
                             <div class="card-img-top"><img src="./images/testimonial-3.jpg" alt="testimonial-3"></div>
                             <div class="card-body">
-                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Repellendus maxime atque a enim voluptatem totam.</p>
                                 <h5 class="text-color">Marsha Singer - Marketer</h5>
                             </div>
                         </div>
@@ -116,7 +138,8 @@
                         <div class="slide-item card text-center">
                             <div class="card-img-top"><img src="./images/testimonial-4.jpg" alt="testimonial-4"></div>
                             <div class="card-body">
-                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Repellendus maxime atque a enim voluptatem totam.</p>
                                 <h5 class="text-color">Tim Shaw - Designer</h5>
                             </div>
                         </div>
@@ -127,7 +150,8 @@
                         <div class="slide-item card text-center">
                             <div class="card-img-top"><img src="./images/testimonial-5.jpg" alt="testimonial-5"></div>
                             <div class="card-body">
-                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Repellendus maxime atque a enim voluptatem totam.</p>
                                 <h5 class="text-color">Lindsay Spice - Marketer</h5>
                             </div>
                         </div>
@@ -138,47 +162,539 @@
                         <div class="slide-item card text-center">
                             <div class="card-img-top"><img src="./images/testimonial-6.jpg" alt="testimonial-6"></div>
                             <div class="card-body">
-                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime atque a enim voluptatem totam.</p>
+                                <p class="text-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Repellendus maxime atque a enim voluptatem totam.</p>
                                 <h5 class="text-color">Ann Black - Developer</h5>
                             </div>
                         </div>
                     </div> <!-- End Slide Item -->
                 </div> <!-- End swiper-wrapper -->
-                
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
                 <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                
+                <div class="swiper-button-next testimonial-swiper-btn-next"></div>
+                <div class="swiper-button-prev testimonial-swiper-btn-prev"></div>
+
             </div> <!-- End swiper-container -->
         </div> <!-- End Testimonial -->
 
         <div class="features">
-
-            <div class="Element-header">
+            <div class="element-header">
                 <h2 class="text-color text-uppercase text-center font-weight-bold">Features</h2>
-                <p class="text-color text-center">Lorem ipsum adipisicing elit. Iure accusamus tenetur velit minima rerum praesentium atque accusantium error, quas provident.</p>
+                <p class="text-color text-center">Lorem ipsum adipisicing elit. Iure accusamus tenetur velit minima
+                    rerum praesentium atque accusantium error, quas provident.</p>
             </div>
             <div class="features-tab">
-                
-            </div>
+                <div class="features-title">
+                    <button class="feature-btn" id="feature-btn-active" onclick="displayFeature(0)"><span><i
+                                class="fas fa-cog"></i> Configuring</span></button>
+                    <button class="feature-btn" onclick="displayFeature(1)"><span><i class="fas fa-binoculars"></i>
+                            Tracking</span></button>
+                    <button class="feature-btn" onclick="displayFeature(2)"><span><i class="fas fa-search"></i>
+                            Monitoring</span></button>
+                </div> <!-- End features-title -->
 
-        </div> <!--End features-->
+                <div class="features-contents">
+                    <div class="features-slide animate__animated animate__fadeIn">
+                        <div class="config-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col col-lg-4 d-flex flex-column justify-content-center align-items-end p-0">
+                                        <div class="config-card config-card-left d-flex no-gutters">
+                                            <div class="icon-text text-right">
+                                                <h4 class="text-color font-weight-bold">Goal Setting</h4>
+                                                <p class="text-color">Like any self improving process, everything starts
+                                                    with setting your goals and committing to them</p>
+                                            </div>
+                                            <div class="icon text-color d-flex justify-content-center">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="far fa-compass fa-stack-1x"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="config-card config-card-left d-flex no-gutters">
+                                            <div class="icon-text text-right">
+                                                <h4 class="text-color font-weight-bold">Visual Editor</h4>
+                                                <p class="text-color">Leno provides a well designed and ergonomic visual
+                                                    editor
+                                                    for
+                                                    you to edit your notes and input data
+
+                                                </p>
+                                            </div>
+                                            <div class="icon text-color d-flex justify-content-center">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="far fa-file-code fa-stack-1x"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="config-card config-card-left d-flex no-gutters">
+                                            <div class="icon-text text-right">
+                                                <h4 class="text-color font-weight-bold">Refined Options</h4>
+                                                <p class="text-color">Each option packaged in the app's menus is
+                                                    provided in
+                                                    order
+                                                    to improve your personal development status</p>
+                                            </div>
+                                            <div class="icon text-color d-flex justify-content-center">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="far fa-gem fa-stack-1x"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-lg-4 text-center p-0">
+                                        <img src="./images/features-iphone-1.png" alt="f-iphone-1">
+                                    </div>
+                                    <div class="col col-lg-4 d-flex flex-column justify-content-center align-items-start p-0">
+                                        <div class="config-card d-flex no-gutters">
+                                            <div class="icon text-color d-flex justify-content-center">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="far fa-calendar-check fa-stack-1x"></i>
+                                                </span>
+                                            </div>
+                                            <div class="icon-text text-left">
+                                                <h4 class="text-color font-weight-bold">Calendar Input</h4>
+                                                <p class="text-color">Schedule your appointments, meetings and
+                                                    periodical
+                                                    evaluations using the provided in-app calendar</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="config-card d-flex no-gutters">
+                                            <div class="icon text-color d-flex justify-content-center">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="far fa-bookmark fa-stack-1x"></i>
+                                                </span>
+                                            </div>
+                                            <div class="icon-text text-left">
+                                                <h4 class="text-color font-weight-bold">Easy Reading</h4>
+                                                <p class="text-color">Reading focus mode for long form articles, ebooks
+                                                    and
+                                                    other
+                                                    materials which involve large text areas</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="config-card d-flex no-gutters">
+                                            <div class="icon text-color d-flex justify-content-center">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="fas fa-cube fa-stack-1x"></i>
+                                                </span>
+                                            </div>
+                                            <div class="icon-text text-left">
+                                                <h4 class="text-color font-weight-bold">Good Foundation</h4>
+                                                <p class="text-color">Get a solid foundation for your self development
+                                                    efforts.
+                                                    Try
+                                                    Leno mobile app for any mobile platform</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End slide configuring -->
+
+                    <div class="features-slide animate__animated animate__fadeIn">
+                        <div class="tracking-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col col-md-4 text-center">
+                                        <img src="./images/features-iphone-2.png" alt="f-iphone-2">
+                                    </div>
+                                    <div class="col col-md-8">
+                                        <div class="feature-part-header">
+                                            <h3 class="text-color font-weight-bold">Track Result Based On Your</h3>
+                                            <p class="text-color">After you've configured the app and settled on the
+                                                data
+                                                gathering
+                                                techniques you can not start the information trackers and start
+                                                collecting those
+                                                <a href="#">interesting details</a>. You can always change
+                                                them.</p>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col col-md-6">
+                                                <div class="tracking-card">
+                                                    <div class="icon text-color">
+                                                        <span class="fa-stack fa-2x">
+                                                            <i class="fas fa-circle fa-stack-2x"></i>
+                                                            <i class="fas fa-cube fa-stack-1x"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="icon-text">
+                                                        <h4 class="text-color font-weight-bold">Good Foundation</h4>
+                                                        <p class="text-color">Get a solid foundation for your self
+                                                            development
+                                                            efforts. Try Leno mobile app for any mobile platform</p>
+                                                    </div>
+                                                </div>
+                                                <div class="tracking-card">
+                                                    <div class="icon text-color">
+                                                        <span class="fa-stack fa-2x">
+                                                            <i class="fas fa-circle fa-stack-2x"></i>
+                                                            <i class="far fa-calendar-check fa-stack-1x"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="icon-text">
+                                                        <h4 class="text-color font-weight-bold">Calendar Input</h4>
+                                                        <p class="text-color">Schedule your appointments, meetings and
+                                                            periodical
+                                                            evaluations using the provided in-app calendar option</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-6">
+                                                <div class="tracking-card">
+                                                    <div class="icon text-color">
+                                                        <span class="fa-stack fa-2x">
+                                                            <i class="fas fa-circle fa-stack-2x"></i>
+                                                            <i class="far fa-bookmark fa-stack-1x"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="icon-text">
+                                                        <h4 class="text-color font-weight-bold">Easy Reading</h4>
+                                                        <p class="text-color">Reading focus mode for long form articles,
+                                                            ebooks
+                                                            and
+                                                            other materials which involve large text areas</p>
+                                                    </div>
+                                                </div>
+                                                <div class="tracking-card">
+                                                    <div class="icon text-color">
+                                                        <span class="fa-stack fa-2x">
+                                                            <i class="fas fa-circle fa-stack-2x"></i>
+                                                            <i class="far fa-file-code fa-stack-1x"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="icon-text">
+                                                        <h4 class="text-color font-weight-bold">Visual Editor</h4>
+                                                        <p class="text-color">Leno provides a well designed and
+                                                            ergonomic visual
+                                                            editor for you to edit your notes and input data</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End slide tracking -->
+
+                    <div class="features-slide animate__animated animate__fadeIn">
+                        <div class="monitoring-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col col-md-8">
+                                        <div class="row">
+                                            <div class="col col-lg-6">
+                                                <div class="tracking-card">
+                                                    <div class="icon text-color">
+                                                        <span class="fa-stack fa-2x">
+                                                            <i class="fas fa-circle fa-stack-2x"></i>
+                                                            <i class="far fa-calendar-check fa-stack-1x"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="icon-text">
+                                                        <h4 class="text-color font-weight-bold">Calendar Input</h4>
+                                                        <p class="text-color">Schedule your appointments, meetings and
+                                                            periodical
+                                                            evaluations using the provided in-app calendar option</p>
+                                                    </div>
+                                                </div>
+                                                <div class="tracking-card">
+                                                    <div class="icon text-color">
+                                                        <span class="fa-stack fa-2x">
+                                                            <i class="fas fa-circle fa-stack-2x"></i>
+                                                            <i class="fas fa-cube fa-stack-1x"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="icon-text">
+                                                        <h4 class="text-color font-weight-bold">Good Foundation</h4>
+                                                        <p class="text-color">Get a solid foundation for your self
+                                                            development
+                                                            efforts. Try Leno mobile app for any mobile platform</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-6">
+                                                <div class="tracking-card">
+                                                    <div class="icon text-color">
+                                                        <span class="fa-stack fa-2x">
+                                                            <i class="fas fa-circle fa-stack-2x"></i>
+                                                            <i class="far fa-file-code fa-stack-1x"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="icon-text">
+                                                        <h4 class="text-color font-weight-bold">Visual Editor</h4>
+                                                        <p class="text-color">Leno provides a well designed and
+                                                            ergonomic visual
+                                                            editor for you to edit your notes and input data</p>
+                                                    </div>
+                                                </div>
+                                                <div class="tracking-card">
+                                                    <div class="icon text-color">
+                                                        <span class="fa-stack fa-2x">
+                                                            <i class="fas fa-circle fa-stack-2x"></i>
+                                                            <i class="far fa-bookmark fa-stack-1x"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="icon-text">
+                                                        <h4 class="text-color font-weight-bold">Easy Reading</h4>
+                                                        <p class="text-color">Reading focus mode for long form articles,
+                                                            ebooks
+                                                            and
+                                                            other materials which involve large text areas</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="feature-part-header">
+                                            <h3 class="text-color font-weight-bold">Monitoring Tools Evaluation</h3>
+                                            <p class="text-color">Monitor the evolution of your finances and health
+                                                state using
+                                                tools integrated in Leno. The generated real time reports can be
+                                                filtered based
+                                                on
+                                                any <a href="#">desired criteria.</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-4 text-center">
+                                        <img src="./images/features-iphone-3.png" alt="f-iphone-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End slide monitoring -->
+
+                </div> <!-- End features-contents -->
+            </div> <!-- End features-tab -->
+
+        </div>
+        <!--End features-->
 
         <div class="preview">
-            <div class="Element-header">
+            <div class="element-header">
                 <h2 class="text-color text-uppercase text-center font-weight-bold">Preview</h2>
-                <p class="text-color text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, dolore corporis ullam molestias vel quia.</p>    
+                <p class="text-color text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, dolore
+                    corporis ullam molestias vel quia.</p>
             </div>
             <div class="preview-video embed-responsive embed-responsive-16by9">
-                <iframe width="853" height="480" src="https://www.youtube.com/embed/mH0_XpSHkZo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/mH0_XpSHkZo" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div> <!-- End preview -->
 
-    </section>
-    <img src="./images/screenshot-3.png" alt="tmp1">
+        <!-- Details -->
+        <div class="details">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <img src="./images/details-1-iphone.png" alt="details-1">
+                    </div>
+                    <div class="col col-lg-6">
+                        <div class="detail-text">
+                            <h3 class="text-color mb-4">Goals Setting</h3>
+                            <p class="text-color mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                maxime
+                                earum nobis doloribus reiciendis error iusto ullam minima veniam consequatur!</p>
+                            <button class="btn btn-primary btn-mod">Lightbox</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <div class="detail-text">
+                            <h3 class="text-color mb-4">Calendar Input</h3>
+                            <p class="text-color mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                                quo
+                                sapiente facere id tenetur esse nam atque iure pariatur at.</p>
+                            <button class="btn btn-primary btn-mod">Lightbox</button>
+                        </div>
+                    </div>
+                    <div class="col col-lg-6">
+                        <img src="./images/details-2-iphone.png" alt="details-2">
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End Details -->
 
+        <!-- Screenshot -->
+        <div class="screenshot">
+            <div class="screenshot-slide">
+                <div class="swiper-container screenshot-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/screenshot-1.png" alt="screenshot-1"></div>
+                        <div class="swiper-slide"><img src="./images/screenshot-2.png" alt="screenshot-2"></div>
+                        <div class="swiper-slide"><img src="./images/screenshot-3.png" alt="screenshot-3"></div>
+                        <div class="swiper-slide"><img src="./images/screenshot-4.png" alt="screenshot-4"></div>
+                        <div class="swiper-slide"><img src="./images/screenshot-5.png" alt="screenshot-5"></div>
+                        <div class="swiper-slide"><img src="./images/screenshot-6.png" alt="screenshot-6"></div>
+                        <div class="swiper-slide"><img src="./images/screenshot-7.png" alt="screenshot-7"></div>
+                        <div class="swiper-slide"><img src="./images/screenshot-8.png" alt="screenshot-8"></div>
+                        <div class="swiper-slide"><img src="./images/screenshot-9.png" alt="screenshot-9"></div>
+                        <div class="swiper-slide"><img src="./images/screenshot-10.png" alt="screenshot-10"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                </div>
+            </div>
+        </div> <!-- End Screenshot -->
+
+        <!-- Download -->
+        <div class="download">
+            <div class="container">
+                <div class="row">
+                    <div class="download-contents col col-lg-6">
+                        <h3 class="text-color">Download Leno</h3>
+                        <p class="text-color">Target the right customers for your business with the help of Leno's
+                            patented technology and increase conversion figures in less than 2 weeks</p>
+                        <div class="d-flex justify-content-center">
+                        <button class="btn-mod btn btn-primary text-color"><i
+                                class="fab fa-apple text-color mr-3"></i>App store</button>
+                        <button class="btn-mod btn btn-primary text-color"><i
+                                class="fab fa-google-play text-color mr-3"></i>Play store</button>
+                        </div>
+                    </div>
+                    <div class="col col-lg-6"><img src="./images/download.png" alt="download-img"></div>
+                </div>
+            </div>
+        </div> <!-- End Download-->
+
+        <!-- Contact -->
+        <div class="contact">
+            <div class="contact-form">
+                <h2 class="text-color text-uppercase text-center">Contact</h2>
+                <p class="text-color text-center">Don't hesitate to give us a call or just use the contact form below
+                </p>
+                <p class="text-center">
+                    <span class="text-color"><i class="fas fa-map-marker-alt"></i> 22 Innovative, San Francisco, CA
+                        94043, US </span>
+                    <span class="text-color"><i class="fas fa-phone"></i><a class="text-color" href="#"> +81 720
+                            2212</a></span>
+                    <span class="text-color"><i class="fas fa-envelope"></i><a class="text-color" href="#">
+                            office@leno.com</a></span>
+                </p>
+
+                <!-- Form contact -->
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name">
+                        <small class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email">
+                        <small class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" cols="30" rows="5" placeholder="Your message"></textarea>
+                    </div>
+                    <div class="contact-checkbox">
+                        <input type="checkbox" id="form-checkbox" class="form-check-input">
+                        <label for="form-checkbox" class="form-check-label text-color pt-3">
+                            I have read and agree to Leno's stated conditions in
+                            <a class="text-color" href="#"><ins>Privacy Police</ins></a> and
+                            <a class="text-color" href="#"><ins>Terms Conditions</ins></a>
+                        </label>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-mod text-uppercase">Submit message</button>
+                </form>
+            </div>
+        </div> <!-- End Contact-->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-row row">
+                <!-- Footer About Leno -->
+                <div class="col col-md-4 about-leno">
+                    <div class="w-75">
+                        <h4 class="text-color font-weight-bold mb-3">About Leno</h4>
+                        <p class="text-color">We're passionate about creating the best mobile apps for personal
+                            development
+                        </p>
+                    </div>
+                </div> <!-- End Footer About Leno -->
+
+                <!-- Footer Important Link -->
+                <div class="col col-md-4 important-link">
+                    <div class="w-100">
+                        <h4 class="text-color font-weight-bold mb-3">Important Links</h4>
+                        <ul>
+                            <li class="text-color">Our business partners <a href="#" class="blue-color"><ins>startupguide.com</ins></a>
+                            </li>
+                            <li class="text-color">Read our <a href="#" class="blue-color"><ins>Terms & Conditions</ins></a>, <a
+                                    href="#" class="blue-color"><ins>Privacy Policy</ins>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div> <!-- End Footer Important Link -->
+
+                <!-- Footer Social Media -->
+                <div class="col col-lg-4 social-media">
+                    <div class="w-75">
+                        <h4 class="text-color font-weight-bold mb-3">Social Media</h4>
+                        <div class="row">
+                            <div class="col col-lg">
+                                <span class="fa-stack">
+                                    <a href="#">
+                                        <i class="fas fa-circle fa-stack-2x "></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="col col-lg">
+                                <span class="fa-stack">
+                                    <a href="#">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="col col-lg">
+                                <span class="fa-stack">
+                                    <a href="#">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-google-plus-g fa-stack-1x fa-inverse"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="col col-lg">
+                                <span class="fa-stack">
+                                    <a href="#">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="col col-lg">
+                                <span class="fa-stack">
+                                    <a href="#">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End Footer Social Media -->
+            </div>
+        </div> <!-- End Container -->
+        <div class="copyright mt-3">
+            <p class="text-color text-center">Copyright © Leno - Mobile App Landing Page Template by Inovatik</p>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

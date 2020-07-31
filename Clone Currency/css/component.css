@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+}
+/* ------------------------- Component ---------------------------- */
+/* ----- Section title */
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.section-title::after {
+    width: 250px;
+    height: 8px;
+    background-color: #FF880E;
+    content: "";
+    display: block;
+    transform: skew(-30deg);
+}
+
+/* ------- Button viền cam ----------- */
+.btn-mod {
+    border-radius: 0;
+    border-color: #FF880E;
+    padding: 10px 36px;
+    color: black;
+    font-size: 1.15rem;
+    transition: all 0.5s;
+}
+.btn-mod:hover, .btn:after {
+    color: #FF880E;
+}
+/* -------- Services item ------------ */
+.services-item {
+    width: 100%;
+}
+.services-item img {
+    width: 100%;
+}
+.service-item-label {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ---------- 5/ Khung new -------------- */
+.new-bg {
+    padding-top: 40%;
+    background-image: url(../images/b1.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+.new-bg .item-info {
+    background-color: #FF880E;
+    color: white;
+    padding: 10px 5px;
+    transition: ease 0.5s;
+}
+.item-info p {
+    font-size: 0.9rem;
+    color: white;
+}
+.new-btn-mod {
+    padding: 12px 80px;
+    border: solid 1px white;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    opacity: 0;
+    transition: ease 0.5s;
+}
+.new-bg:hover .new-btn-mod {
+    opacity: 1;
+}
+.new-bg:hover .item-info {
+    opacity: 0;
+}
+.new-bg:hover {
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.5) 100%, rgba(0,0,0,0.5) 100%), url(../images/b1.png);
+}
+/* ------------- Form -------------- */
+.about-form {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(../images/contact_bg.png);
+    background-position: center;
+    background-size: cover;
+}
+.about-form form {
+    width: 40%;
+    margin: 0 auto;
+}
+.about-form input, .about-form textarea {
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    width: 100%;
+    background-color: #0E0606;
+    font-size: 1.1rem;
+    color: white;
+}
+.about-form textarea {
+    resize: none;
+}
+.form-btn {
+    text-transform: uppercase;
+    color: black;
+    background-color: #f1f1f8;
+    width: 200px;
+    height: 60px;
+    margin: 0 50%;
+    border: none;
+    font-size: 1.2rem;
+    transform: translate(-50%);
+    transition: all 0.5s;
+}
+.form-btn:hover, .form-btn:active {
+    background-color: black;
+    color: #f1f1f8;
+}
+
+/* ---------- Footer -------------- */
+footer {
+    width: 100%;
+}
+.footer-info {
+    background-color: #3A1E02;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #f1f1f8;
+}
+.footer-info p, .footer-info a {
+    color: #f1f1f8;
+    font-size: 1rem;
+}
+.footer-info ul {
+    list-style-type: none;
+    margin-left: -40px;
+}
+.list-link li {
+    margin-bottom: 8px;
+}
+.list-link a {
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.list-link a:hover, .list-link a:active {
+    color: #D66C0B;
+}
+.footer-title {
+    font-size: 2rem;
+    font-weight: 400;
+}
+.footer-title::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #D66C0B;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.footer-logo img {
+    width: 95%;
+}
+.newsletter input {
+    width: 70%;
+    margin-bottom: 10px;
+}
+.newsletter button {
+    width: 40%;
+    color: #f1f1f8;
+    background-color: #D66C0B;
+}
+.contacts-list {
+    width: 100%;
+}
+.contacts-list li {
+    margin-bottom: 10px;
+}
+.contacts-list img {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+.copyright {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #532A02;
+}
+.copyright p {
+    color: #f1f1f8;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ---------- Header ------------- */
+header {
+    width: 100%;
+    height: 112vh;
+}
+#header-top-2 {
+    position: relative;
+    transition: all 0.2s;
+    z-index: 3;
+}
+#header-top-1 {
+    position: fixed;
+    top:-100%;
+    width: 100%;
+    z-index: 2;
+    transition-timing-function: cubic-bezier(1,.17,.56,1.04);
+    transition-property: opacity, top;
+    transition-duration: 1.5s, 0.8s;
+    opacity: 0;
+}
+.header-navbar {
+    position: absolute;
+    width: 100%;
+}
+.header-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+.info {
+    margin-left: 120px;
+}
+.info ul {
+    list-style: none;
+    margin-top: 20px;
+}
+.info ul li {
+    display: inline;
+    margin-right: 50px;
+}
+.info li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #1f1f1f;
+}
+.info li a i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+.info a.join-btn {
+    margin-left: 40px;
+    padding: 6px 60px;
+    border-radius: 1.5rem;
+    background-color: #FF880E;
+    color: #f4f4f8;
+    transition: all 0.4s;
+}
+.info a.join-btn:hover {
+    background-color: black;
+}
+.h-navbar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    z-index: 2;
+}
+.h-navbar .navbar-orange {
+    width: 70%;
+    background-color: #FF880E;
+    padding-left: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.navbar-orange::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 60px;
+    background-color: #FF880E;
+    position: absolute;
+    top: -50%;
+    right: 100%;
+    transform: translate(50%, 50%) skew(30deg);
+}
+.h-navbar li {
+    margin-right: 40px;
+}
+.h-navbar a {
+    font-size: 1.1rem;
+    color: #1f1f1f;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+.h-navbar a:hover {
+    color: white;
+}
+.search-btn {
+    padding: 5px;
+    background-color: #000000;
+    position: relative;
+}
+#search-box {
+    width: 250px;
+    height: 40px;
+    position: absolute;
+    top: -1px;
+    left: -250px;
+    visibility: hidden;
+}
+#search-box input {
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 0%;
+    transition: width 1s;
+    border: none;
+    visibility: hidden;
+}
+.search-btn:hover #search-box input {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+/* Slide */
+.header-slide {
+    position: relative;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.swiper-pagination-bullet {
+    width: 45px;
+    height: 10px;
+    border-radius: 2.5rem;
+    background-color: #ffffff;
+    opacity: 1;
+    bottom: 20%;
+}
+.swiper-pagination-bullet-active {
+    background: #FF880E;
+}
+.slide {
+    width: 100%;
+    height: 680px;
+    background-image: url(../images/slide_img.png);
+    background-position: left;
+    background-size: cover;
+    position: relative;
+}
+.header-title {
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+}
+.header-title h1, .header-title h2 {
+    color: #f4f4f8;
+}
+.header-title h1 {
+    font-size: 10rem;
+}
+.header-title h2 {
+    font-size: 5.5rem;
+    font-weight: lighter;
+}
+.slide .btn-mod {
+    background-color: inherit;
+    border-color: white;
+    color: white;
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+}
+.slide .btn-mod:hover {
+    color: #FF880E;
+}
